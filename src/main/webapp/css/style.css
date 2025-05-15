@@ -1,0 +1,242 @@
+:root {
+    --primary-color: #009B4D;
+    --accent-color: #FFCC00;
+    --accent-dark: #CC9900;
+    --background-color: #FAF5E9;
+    --text-dark: #222;
+    --btn-color: #009B4D;
+    --btn-hover: #006400;
+    --transition-speed: 0.3s;
+    --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-stack);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-dark);
+}
+
+/* Header */
+.main_title {
+    font-size: 2.5rem;
+    padding: 20px;
+    color: var(--background-color);
+    background: linear-gradient(to right, black, var(--primary-color));
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Layout container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 40px;
+    gap: 30px;
+}
+
+/* Left Side */
+.left_part {
+    flex: 1 1 45%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.head {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.info {
+    font-size: 1.2rem;
+    color: var(--accent-dark);
+    line-height: 1.6;
+    text-align: justify;
+    padding: 0 10px;
+    text-shadow: 0.5px 0.5px #00000020;
+}
+
+.next_btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn {
+    background-color: var(--btn-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+.btn:hover {
+    background-color: var(--btn-hover);
+}
+
+/* Right Side */
+.right_part {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.rec_img {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+img:hover {
+    transform: scale(1.03);
+}
+
+/* Fade effect */
+.fade {
+    animation: fade 1.5s ease-in-out;
+}
+
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .left_part, .right_part {
+        width: 100%;
+    }
+
+    .head {
+        font-size: 2rem;
+    }
+
+    .info {
+        font-size: 1rem;
+    }
+}
+.rec_img {
+    width: 100%;
+    height: 200px; /* fixed height for consistency */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rec_img {
+    width: 100%;
+    height: 475px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rec_img img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Add Recommendation Form Styles */
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+.admin_head{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form label {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color var(--transition-speed);
+}
+
+form input[type="text"]:focus,
+form textarea:focus {
+    border-color: var(--primary-color);
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #999;
+}
+
+form input[type="submit"] {
+    background-color: var(--btn-color);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+form input[type="submit"]:hover {
+    background-color: var(--btn-hover);
+}
+
