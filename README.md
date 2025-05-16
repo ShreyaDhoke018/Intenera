@@ -62,23 +62,20 @@ cd travel-itinerary-generator
 ✍️ Update your Hibernate configuration file (hibernate.cfg.xml) with your database credentials and settings.
 
 3) Build and Deploy
-
-If using Maven:
-
-bash
-Copy
-Edit
+Open the folder on **Intellij**, and run the command: 
 mvn clean package
 Deploy the generated WAR file (target/Travel-1.0-SNAPSHOT.war) to your Tomcat webapps folder.
 
-If manual, compile your source code and place the compiled classes and JSPs into Tomcat's webapps directory as per your project structure.
-
 4) Run the application
 
-▶️ Start Tomcat server, click on restart server it will automatically open the website on browser.
+▶️ Add the war file in Tomcat Server deployment, Start Tomcat server, it will automatically open the website on browser or manually open on localhost:
+'http://localhost:8080/Travel_1.0_SNAPSHOT_war/'
 
 
 ## 🛠️ Important Note:
 - There are only **few itinerary available in database**, choose a trip which has **one of the listed destination** place:
 [pune, pondicherry, jaipur, udaipur, goa, shimla, leh, agra]
 - By default registering through the first page will have **role** as **user**
+- ***Admin login credentials***:
+  email: admin1@gmail.com
+  password: admin@1234
