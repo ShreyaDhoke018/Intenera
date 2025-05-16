@@ -19,8 +19,6 @@ public class Trip {
     @Column(name = "Trip_To")
     private String tripTo;
 
-    @Column(name = "Trip_Type")
-    private String tripType;
 
     @Column(name = "Trip_StartDate")
     @Temporal(TemporalType.DATE)
@@ -30,7 +28,15 @@ public class Trip {
     @Temporal(TemporalType.DATE)
     private Date tripEndDate;
 
-    // Getters and setters
+    public Trip(){}
+
+    public Trip(String tripFrom, String tripTo, Date tripStartDate, Date tripEndDate) {
+        this.tripFrom = tripFrom;
+        this.tripTo = tripTo;
+        this.tripStartDate = tripStartDate;
+        this.tripEndDate = tripEndDate;
+    }
+// Getters and setters
 
     public int getTripId() {
         return tripId;
@@ -54,14 +60,6 @@ public class Trip {
 
     public void setTripTo(String tripTo) {
         this.tripTo = tripTo;
-    }
-
-    public String getTripType() {
-        return tripType;
-    }
-
-    public void setTripType(String tripType) {
-        this.tripType = tripType;
     }
 
     public Date getTripStartDate() {

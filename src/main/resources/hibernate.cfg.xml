@@ -20,6 +20,7 @@
         <!-- Mapping entity -->
         <mapping class="org.example.Trip"/>
         <mapping class="org.example.Recommendation"/>
+        <mapping class="org.example.Tourist_Places"/>
 
     </session-factory>
 </hibernate-configuration>
